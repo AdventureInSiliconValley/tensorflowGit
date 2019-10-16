@@ -18,6 +18,7 @@ print(yArr)
 
 fig = plt.figure()
 
+# ax is short for "axes"
 # rows: 2, columns: 2, graphSerialNumber: 1
 ax1 = fig.add_subplot(221)
 

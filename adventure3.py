@@ -11,6 +11,8 @@ B = np.array([[2, 0], [3, 4]])
 
 print(A.dot(B))
 
+print(np.dot(A, B))
+
 a = np.ones((2, 3), dtype=int)
 
 print(a)
@@ -47,6 +49,7 @@ f = np.random.random((2, 3))
 f.sum()
 f.max()
 f.min()
-f.cumsum(axis=1)
+
+print(f.cumsum(axis=1))
 
 
