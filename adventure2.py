@@ -1,5 +1,5 @@
 import numpy as np
-from Adevnture1 import n
+from adevnture1 import n
 
 a = [1, 2, 3]
 b = [4, 5, 6]
