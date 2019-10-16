@@ -1,4 +1,5 @@
 import numpy as np
+from Adevnture1 import n
 
 a = [1, 2, 3]
 b = [4, 5, 6]
@@ -14,3 +15,7 @@ d = np.array([1, 2, 3])
 e = np.array([4, 5, 6])
 
 print(np.dot(d, e))
+
+print(n)
+
+
