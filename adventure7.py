@@ -26,8 +26,9 @@ for i in range(1, 9):
 
 # Third dish of number 0.
 # For every number of the first dish, find the total number of combinations for the second dish with number from 1 to 4.
+# The so-called 'either not use it or use it all' strategy.
 # Now we have the number of total combinations for every combination of the first and the second dish
-#  with the third dish with number 0.
+#  when the third dish is with number 0.
 for i in range(1, 9):
     for j in range(1, min(i + 1, 6)):
         for k in range(1, min(i + 1, 5)):
