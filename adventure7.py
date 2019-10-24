@@ -17,21 +17,21 @@ m = np.zeros((9, 6, 5, 4))
 # It's the first boundary condition.
 m[0][:] = 1
 
-# First dish and third dish with value of 0.
-# For all the numbers of the second dish, find the number of total combinations.
+# Second dish and third dish with value of 0.
+# For all the numbers of the first dish, find the number of total combinations.
 for i in range(1, 9):
-    for j in range(1, 5):
+    for j in range(1, 6):
         if j >= i:
-            m[i][0][j][0] = 1
+            m[i][j][0][0] = 1
 
 # Third dish of number 0.
-# For every number of the second dish, find the total number of combinations for the first dish with number from 1 to 5.
+# For every number of the first dish, find the total number of combinations for the second dish with number from 1 to 4.
 # Now we have the number of total combinations for every combination of the first and the second dish
 #  with the third dish with number 0.
 for i in range(1, 9):
     for j in range(1, min(i + 1, 6)):
         for k in range(1, min(i + 1, 5)):
-            m[i][j][k][0] += m[i][j - 1][k][0] + m[i - j][0][k][0]
+            m[i][j][k][0] += m[i][j][k - 1][0] + m[i - k][j][0][0]
 
 # For every combination of the first and second dish,
 # find the total number of combinations for the third dish with number from 1 to 3.
